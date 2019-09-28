@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'HotTea.wsgi.application'
 
 DATABASES = {
    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'TeaPanel',
-        'USER':'postgres',
-        'PASSWORD':'2017PASS',
-        'HOST':'localhost',
-        'PORT':"5432"
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

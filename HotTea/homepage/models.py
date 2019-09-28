@@ -4,33 +4,26 @@ from django.db import models
 
 
 #homepage top picks
-class homemenu(models.Model):
-    TeaName = models.CharField(max_length=50)
-    TeaPrice = models.IntegerField(max_length=50)
-    description = models.TextField()
+class Homemenu(models.Model):
+    ProductName = models.CharField(max_length=50)
+    ProductPrice = models.IntegerField(max_length=50)
+    Description = models.TextField()
 
 #users
-class user(models.Model):
+class User(models.Model):
     UserName = models.CharField(max_length=20)
     PassWord = models.CharField(max_length=20)
     PhoneNumber = models.IntegerField(max_length=12)
-
-#real enucard
-class menucard(models.Model):
-    TeaName = models.CharField(max_length=50)
-    TeaPrice = models.IntegerField(max_length=50)
-    description = models.TextField()    
+    Location = models.CharField(max_length=20)
+  
 
 #orders
 class Orders(models.Model):
-    Order_TeaName =  models.CharField(max_length=50)
-    TeaPrice = models.IntegerField(max_length=50)
+    UserId = models.IntegerField(max_length=12)
+    ProductId = models.IntegerField(max_length=12)
+    Quantity = models.IntegerField(max_length=12)
+    Status = models.CharField(max_length=20)
 
-#to find users pattern    
-class UserPattern(models.Model):
-    User_Id =  models.IntegerField(max_length=50)
-    Order_tea = models.CharField(max_length=50)
-    Date = models.DateField(auto_now_add=True)
 
 
     

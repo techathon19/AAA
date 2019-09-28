@@ -1,6 +1,6 @@
 from django.contrib import admin
-from homepage.models import homemenu
+from homepage.models import Homemenu
 
 # Register your models here.
 
-admin.site.register(homemenu)
+admin.site.register(Homemenu)
